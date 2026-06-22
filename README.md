@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
   </p>
 
-  <img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/main.png" alt="requo main window" width="900">
+  <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/main.png" alt="requo main window" width="900">
 </div>
 
 ---
@@ -33,42 +33,42 @@
 ### HTTP Requests
 Send any HTTP request with full control over method, URL, query parameters, headers, and body. JSON body editor with syntax highlighting and auto-prettify.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/request-editor.png" alt="Request editor" width="800">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/request-editor.png" alt="Request editor" width="800">
 
 ### Response Viewer
 Syntax-highlighted response with status, timing, and size at a glance. Switch between Pretty, Raw, Headers, and Preview (HTML) tabs. Search within the response body with Ctrl+F.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/response-viewer.png" alt="Response viewer" width="800">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/response-viewer.png" alt="Response viewer" width="800">
 
 ### Collections
 Organise requests into folders. Collections are stored as plain files — commit them to your repo and share with your team without any sync account.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/collections.png" alt="Collections sidebar" width="400">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/collections.png" alt="Collections sidebar" width="400">
 
 ### Environments & Variables
 Define environments (dev, staging, prod) with named variables. Switch environments instantly without editing requests. Export environments to JSON for sharing.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/environments.png" alt="Environment manager" width="700">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/environments.png" alt="Environment manager" width="700">
 
 ### Authentication
 Built-in support for Bearer token, Basic auth, API key, and OAuth 2.0 (Client Credentials and Resource Owner Password grant types).
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/auth-editor.png" alt="Auth editor" width="700">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/auth-editor.png" alt="Auth editor" width="700">
 
 ### Request Timeline
 Every request in a tab is recorded in a timeline. Inspect past requests, compare responses, and see exactly what was sent — including variables resolved at runtime.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/timeline.png" alt="Request timeline" width="800">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/timeline.png" alt="Request timeline" width="800">
 
 ### Collection Runner & Test Suites
 Run an entire collection or folder in sequence. Write pre/post-request scripts and assertions to build automated test suites. View aggregated pass/fail results.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/runner.png" alt="Collection runner" width="800">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/runner.png" alt="Collection runner" width="800">
 
 ### Git Integration
 Commit your collection directly from the app. View git status and diffs without leaving requo.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/main/screenshots/git-commit.png" alt="Git commit dialog" width="600">
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/git-commit.png" alt="Git commit dialog" width="600">
 
 ### Import & Export
 Import from **Postman v2.1**, **Insomnia v4**, **Bruno**, **OpenAPI**, **HAR**, and URL. Export to **Postman**, **OpenAPI 3.0**, and **Insomnia** formats.
