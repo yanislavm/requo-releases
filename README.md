@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
   </p>
 
-  <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/main.png" alt="requo main window" width="900">
+  <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/overview.png" alt="requo main window" width="900">
 </div>
 
 ---
@@ -41,12 +41,12 @@ Syntax-highlighted response with status, timing, and size at a glance. Switch be
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/response-viewer.png" alt="Response viewer" width="800">
 
 ### Collections
-Organise requests into folders. Collections are stored as plain files — commit them to your repo and share with your team without any sync account.
+Organise requests into folders. Collections are stored as plain files — commit them to your repo and share with your team without any sync account. Supports both the native requo format and **Bruno** collections opened in-place.
 
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/collections.png" alt="Collections sidebar" width="400">
 
 ### Environments & Variables
-Define environments (dev, staging, prod) with named variables. Switch environments instantly without editing requests. Export environments to JSON for sharing.
+Define environments (dev, staging, prod) with named variables. Switch environments instantly without editing requests. Import and export environments as JSON. Variable tokens are colour-coded in the URL bar: **green** means resolved, **orange** means missing or empty.
 
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/environments.png" alt="Environment manager" width="700">
 
@@ -54,6 +54,11 @@ Define environments (dev, staging, prod) with named variables. Switch environmen
 Built-in support for Bearer token, Basic auth, API key, and OAuth 2.0 (Client Credentials and Resource Owner Password grant types).
 
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/auth-editor.png" alt="Auth editor" width="700">
+
+### Scripts & Assertions
+Write pre- and post-request scripts in JavaScript. Set variables, assert on response values, and build automated test suites without leaving the app. Per-request timeout overrides are configurable in the Scripts tab.
+
+<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/scripts.png" alt="Scripts tab" width="800">
 
 ### Request Timeline
 Every request in a tab is recorded in a timeline. Inspect past requests, compare responses, and see exactly what was sent — including variables resolved at runtime.
@@ -65,13 +70,14 @@ Run an entire collection or folder in sequence. Write pre/post-request scripts a
 
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/runner.png" alt="Collection runner" width="800">
 
-### Git Integration
-Commit your collection directly from the app. View git status and diffs without leaving requo.
+### gRPC
+Call gRPC services dynamically using server reflection — no proto files needed. Browse available services and methods, send requests, and inspect responses in the same interface.
 
-<img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/git-commit.png" alt="Git commit dialog" width="600">
+### Bruno Collections
+Open any existing Bruno collection folder directly in requo. All `.bru` files are read and written in-place with byte-identical round-trips — no migration or conversion needed. Collections show a **Bruno** badge in the sidebar.
 
 ### Import & Export
-Import from **Postman v2.1**, **Insomnia v4**, **Bruno**, **OpenAPI**, **HAR**, and URL. Export to **Postman**, **OpenAPI 3.0**, and **Insomnia** formats.
+Import from **Postman v2.1**, **Insomnia v4**, **Bruno**, **OpenAPI**, **HAR**, **URL**, and **cURL**. Export to **Postman**, **OpenAPI 3.0**, and **Insomnia** formats.
 
 ---
 
@@ -110,6 +116,9 @@ The `requo` CLI and `requo-server` (headless API server) are available as standa
 ```bash
 # Run a collection from the command line
 requo run ./my-collection --env production
+
+# Run a named test suite with JUnit output
+requo run ./my-collection --suite smoke --reporter junit --out results.xml
 ```
 
 ---
@@ -120,7 +129,7 @@ requo run ./my-collection --env production
 2. Add a request — enter a URL and hit **Send**
 3. Save the request to your collection
 4. Create an **Environment** with a `baseUrl` variable, reference it as `{{baseUrl}}` in your requests
-5. Commit your collection with **Git Commit…** from the collection context menu
+5. Press **?** to open the keyboard shortcuts reference
 
 ---
 
