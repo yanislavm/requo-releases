@@ -51,7 +51,7 @@ Define environments (dev, staging, prod) with named variables. Switch environmen
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/environments.png" alt="Environment manager" width="700">
 
 ### Authentication
-Built-in support for Bearer token, Basic auth, API key, and OAuth 2.0 (Client Credentials and Resource Owner Password grant types).
+Built-in support for Bearer token, Basic auth, API key, OAuth 2.0 (Client Credentials, Resource Owner Password, and **Authorization Code + PKCE** grant types). Tokens are cached and auto-refreshed; the PKCE flow opens the browser and captures the redirect automatically.
 
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/auth-editor.png" alt="Auth editor" width="700">
 
@@ -60,10 +60,13 @@ Write pre- and post-request scripts in JavaScript. Set variables, assert on resp
 
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/scripts.png" alt="Scripts tab" width="800">
 
-### Request Timeline
-Every request in a tab is recorded in a timeline. Inspect past requests, compare responses, and see exactly what was sent — including variables resolved at runtime.
+### Response Timing Breakdown
+Every response shows a phase breakdown — **DNS**, **Connect**, **TLS**, **TTFB**, and **Total** — rendered as a stacked bar so you can spot where latency is coming from at a glance.
 
 <img src="https://github.com/yanislavm/requo-releases/raw/master/screenshots/timeline.png" alt="Request timeline" width="800">
+
+### Request Timeline
+Every request in a tab is recorded in a timeline. Inspect past requests, compare responses, and see exactly what was sent — including variables resolved at runtime.
 
 ### Collection Runner & Test Suites
 Run an entire collection or folder in sequence. Write pre/post-request scripts and assertions to build automated test suites. View aggregated pass/fail results.
@@ -75,6 +78,9 @@ Call gRPC services dynamically using server reflection — no proto files needed
 
 ### Bruno Collections
 Open any existing Bruno collection folder directly in requo. All `.bru` files are read and written in-place with byte-identical round-trips — no migration or conversion needed. Collections show a **Bruno** badge in the sidebar.
+
+### Secret Vaults
+Inject secrets at runtime from **HashiCorp Vault**, **AWS Secrets Manager**, or **Azure Key Vault** using the `{{vault:alias/path#field}}` syntax — no secrets ever touch your collection files. Credentials are stored in the OS keyring and managed from the Settings → Vaults tab.
 
 ### Import & Export
 Import from **Postman v2.1**, **Insomnia v4**, **Bruno**, **OpenAPI**, **HAR**, **URL**, and **cURL**. Export to **Postman**, **OpenAPI 3.0**, and **Insomnia** formats.
